@@ -1,0 +1,26 @@
+﻿
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    a:focus {
+        text-decoration: none;
+    }
+ 
+.custom-list-title {
+    color: #000000;
+    height: 13px;
+    line-height: 14px;
+    margin-top: 14px;
+    font-size: 16px;
+    margin-left: 10px;
+    
+}
+.list-group-item {
+    cursor: pointer;
+}
+

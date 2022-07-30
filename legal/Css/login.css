@@ -1,0 +1,88 @@
+﻿/*body {
+    margin:0px;
+    padding:0px;
+    background-image:url('../images/newImg/login_bg1.jpg')
+}
+.custom-login-top,.custom-login-middle,.custom-login-bottom {
+    width:545px;
+}
+.custom-login-top {
+    background-image:url('../images/newImg/login_top.jpg');
+    height:114px;
+}
+.custom-login-middle {
+    background-image:url('../images/newImg/logon_middle.png');    
+    height:210px;
+}
+.custom-login-bottom {
+    background-image:url('../images/newImg/logon_end.png');
+    height:61px;
+}
+.form-control {
+    width:260px;
+}
+.custom-login-btn {
+    margin-top:30px;
+}
+.container {
+    margin-top:10%;
+}*/
+
+form {
+    color: #000000;
+    width: 500px;
+    margin: auto;
+    font-size: 20px;
+    margin-top: 150px;
+}
+
+#spanpsd {
+    margin-left: 125px;
+}
+
+#spanuser {
+    margin-left: 110px;
+}
+
+div {
+    margin: 30px auto;
+    align-content: center;
+}
+
+.hd {
+    color: #000000;
+    width: 500px;
+    margin: auto;
+    font-size: 30px;
+    align-content:center;
+}
+
+
+.textbox {
+    border: solid 1px;
+    background: rgba(0, 0, 0, 0);
+}
+
+#LinkButton1 {
+    text-decoration: none;
+    color: lavenderblush;
+    margin-left: 230px;
+}
+
+#Button1 {
+    border-radius: 2px;
+    border: solid 1px;
+    background-color: transparent;
+    margin-left: 150px;
+    margin-top: 10px;
+}
+
+body {
+    background-image: url('../images/newImg/bj2.jpg');
+}
+
+.custom-login-middle {
+    background-image: url('../images/newImg/logon_middle.png');
+    height: 210px;
+}
+

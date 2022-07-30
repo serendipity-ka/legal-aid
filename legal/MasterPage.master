@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<%@ Register Src="UserControl/InfoSearch.ascx" TagName="InfoSearch" TagPrefix="uc2" %>
+<html>
+<head runat="server">
+    <title>法律援助</title>
+    <script type="text/javascript" src="Scripts/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/master.css" rel="stylesheet" type="text/css" />
+    <link href="css/css.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+  
+</head>
+<body>
+    <form id="form1" runat="server">
+            <div class="row custom-header">
+                <div class="col-sm-6 col-md-6 custom-header-col">
+                    <asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="~/infoadd.aspx">发布信息</asp:HyperLink>                  
+                    <asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/Login.aspx">进入后台</asp:HyperLink>  
+                    <a href="#">设为首页</a> 
+                    <a href="mailto:ABC***@1**.COM">联系我们</a>
+                   
+                </div>
+                <div class="col-sm-6 col-md-6  text-right custom-header-col">
+                     <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Login2.aspx">登录</asp:HyperLink>  
+                    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Register2.aspx">注册</asp:HyperLink>
+                </div>
+            </div>
+            <div class="row custom-nav">
+                <div class="col-sm-12 col-md-12 custom-header-nav">
+                    <div class="col-sm-3 col-md-3 text-right"><img src="../images/newImg/logo1.jpg" class="custom-header-logo"/></div>
+                    <div class="col-sm-9 col-md-9">
+                        <div class="row">    
+                            <div class="col-sm-12 col-md-12 custom-header-nav-box">
+                                <ul class="nav nav-pills nav-justified custom-header-nav-1">
+                                    <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">首　　页</asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/LawPage.html">法律科普</asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/LawConsult.aspx">法律咨询</asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/InfoAdd.aspx">发布信息</asp:HyperLink></li>
+                                    <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/ShowPage/index.html">社区交流</asp:HyperLink></li>
+                                </ul>
+                            </div> 
+                        </div> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="row custom-content">
+                <div class="col-sm-4 col-md-4">
+                    <div class="row custom-content-search">
+                        <div class="col-sm-12 col-md-12">
+                            <uc2:InfoSearch ID="InfoSearch1" runat="server" />
+                        </div>
+                    </div>
+                    <div class="row custom-content-lx">
+                        <div class="col-sm-12 col-md-12">
+                            <div class="custom-content-lx-box">
+                                <div class="custom-left-title"><img src="../images/newImg/fk.png"/> 关于我们</div>
+                                <p>广州市增城区数据科学学院19本软件工程2班</p>
+                                <p>联系地址：广州市增城区荔城街华商路1号</p>
+                                <p>厚德楼A304室</p>
+                                <p>联系电话：8851186 88224275</p>
+                                <p>邮政编码：515311</p>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <div class="col-sm-8 col-md-8">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+            <div class="row custom-bottom">
+                <div class="col-sm-12 col-md-12 custom-bottom-msg text-center">
+                    公司网址：www.software engineer.com 联系电:8712341287&nbsp; 964545613
+                    广东省广州市增城区数据科学学院19本软件工程2班 版权所有 &nbsp;&nbsp;
+                </div>
+            </div>
+    </form>
+
+    <div class="modal fade" id="showLeaguer" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    <div class="modal-dialog">
+		    <div class="modal-content">
+			    <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" 
+						    aria-hidden="true">×
+				    </button>
+				    <h4 class="modal-title" id="myModalLabel">
+					    详情
+				    </h4>
+			    </div>
+			    <div class="modal-body">				    
+                    <iframe id="iframeShow" width="550" height="300" style="border:0px;background-color:white;" scrolling="no"></iframe>
+			    </div>
+			    <div class="modal-footer">
+				    <button type="button" class="btn btn-default" 
+						    data-dismiss="modal">关闭
+				    </button>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+    <script>
+        function SetID(ItemID) {
+            $("#iframeShow").prop("src", "ShowLeaguerInfo.aspx?id=" + ItemID);
+        }
+        $(function () {
+            $('#showLeaguer').modal({
+                keyboard: true,
+                show:false
+        })});
+    </script>
+</body>
+</html>
